@@ -30,6 +30,12 @@ class UserController {
 
     return res.json({ id: user.id, name, email, admin }).status(201)
   }
+
+  async index(req, res) {
+    const users = await User.findAll()
+
+    return res.json(users)
+  }
 }
 
 module.exports = new UserController()
