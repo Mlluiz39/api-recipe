@@ -15,6 +15,8 @@ routes.get('/', (req, res) => {
 routes.post('/users', UserController.store)
 routes.post('/sessions', SessionController.store)
 routes.post('/recipes', RecipeController.store)
+routes.post('/recipes/:id', RecipeController.update)
+routes.post('/recipes', upload.single('image'), RecipeController.store)
 routes.get('/users', UserController.index)
 routes.get('/recipes', RecipeController.index)
 routes.get('/recipes/:id', RecipeController.show)

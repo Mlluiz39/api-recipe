@@ -10,6 +10,7 @@ class Recipe extends Model {
         preparation: Sequelize.STRING,
         preparation_time: Sequelize.STRING,
         income: Sequelize.STRING,
+        image: Sequelize.STRING,
       },
       {
         sequelize,
