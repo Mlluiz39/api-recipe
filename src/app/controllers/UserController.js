@@ -34,7 +34,7 @@ class UserController {
   async index(req, res) {
     const users = await User.findAll()
 
-    return res.json(users)
+    return res.json({ id: users.id, name: users.name, email: users.email })
   }
 }
 
