@@ -62,12 +62,12 @@ class RecipeController {
     const recipe = await Recipe.findByPk(req.params.id)
 
     if (!recipe) {
-      return res.status(400).json({ error: 'Receita não encontrada!' })
+      return res.status(400).json({ error: 'Receita não encontrada !' })
     }
 
     await recipe.destroy()
 
-    return res.json({ message: 'Recipe deleted!' })
+    return res.json({ message: 'Recipe deleted !' })
   }
 }
 
